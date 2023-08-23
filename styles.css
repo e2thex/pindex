@@ -43,3 +43,8 @@ button:hover {
     font-size: 18px;
     font-weight: bold;
 }
+.input-description {
+    font-size: 14px;
+    color: #777; /* Gray text color */
+    margin-top: 5px;
+}
