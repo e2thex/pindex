@@ -16,6 +16,9 @@ h1 {
 
 label {
     font-weight: bold;
+    width:140px;
+    display:inline-block;
+
 }
 
 input, select {
@@ -52,7 +55,7 @@ button:hover {
 }
 .container {
     margin: 0 auto;
-    width: 560px;
+    max-width: 600px;
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
