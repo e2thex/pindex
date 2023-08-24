@@ -7,34 +7,35 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Principle Scoring Web App</h1>
-    <div class="input-container">
-        <label for="effective-rate">Effective Rate (E):</label>
-        <input type="number" id="effective-rate" step="10" placeholder="30"> %
-        <p class="input-description">What percent of the time will you do it because the principle made you do it?</p>
+    <div class="container">
+        <h1>Principle Scoring Web App</h1>
+        <div class="input-container">
+            <label for="effective-rate">Effective Rate (E):</label>
+            <input type="number" id="effective-rate" step="10" placeholder="30"> %
+            <p class="input-description">What percent of the time will you do it because the principle made you do it?</p>
+        </div>
+        <div class="input-container">
+            <label for="correct-rate">Correct Rate (C):</label>
+            <input type="number" id="correct-rate" step="10" placeholder="80"> %
+            <p class="input-description">What percent of that time will the principle make you do the right thing?</p>
+        </div>
+        <div class="input-container">
+            <label for="cost-ratio">Cost Ratio (R):</label>
+            <select id="cost-ratio">
+                <option value="0.25">Following the Principle when it is wrong is hella worse (0.25)</option>
+                <option value="0.5">Following the principal when it is wrong is twice as bad (0.5)</option>
+                <option value="0.8">Following the Principle when it is wrong is slightly worse (0.8)</option>
+                <option value="1">They are the same (1)</option>
+                <option value="1.25" selected>Not following the Principle when it is right is slightly worse (1.25)</option>
+                <option value="2">Not following the Principle when it is right is twice as bad (2)</option>
+                <option value="4">Not following the Principle when it is right is Hella worse (4)</option>
+            </select>
+            <p class="input-description">What is the relative cost of following or not following the principle?</p>
+        </div>
+        <button id="calculate-button">Calculate</button>
+        <div id="result"></div>
+        <div id="rating"></div>
     </div>
-    <div class="input-container">
-        <label for="correct-rate">Correct Rate (C):</label>
-        <input type="number" id="correct-rate" step="10" placeholder="80"> %
-        <p class="input-description">What percent of that time will the principle make you do the right thing?</p>
-    </div>
-    </div>
-    <div class="input-container">
-        <label for="cost-ratio">Cost Ratio (R):</label>
-        <select id="cost-ratio">
-            <option value="0.25">Following the Principle when it is wrong is hella worse (0.25)</option>
-            <option value="0.5">Following the principal when it is wrong is twice as bad (0.5)</option>
-            <option value="0.8">Following the Principle when it is wrong is slightly worse (0.8)</option>
-            <option value="1" default>They are the same (1)</option>
-            <option value="1.25">Not following the Principle when it is right is slightly worse (1.25)</option>
-            <option value="2">Not following the Principle when it is right is twice as bad (2)</option>
-            <option value="4">Not following the Principle when it is right is Hella worse (4)</option>
-        </select>
-        <p class="input-description">What is the relative cost of following or not following the principle?</p>
-    </div>
-    <button id="calculate-button">Calculate</button>
-    <div id="result"></div>
-    <div id="rating"></div>
     <script src="script.js"></script>
 </body>
 </html>
