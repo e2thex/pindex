@@ -9,6 +9,7 @@
 <body>
     <div class="container">
         <h1>Score you Principle!</h1>
+            <p class="input-description">To learn more you can read the <a href="./docs">P-Index App docs</a></p>
         <div class="input-container">
             <label for="effective-rate">Effective Rate (E):</label>
             <input type="number" id="effective-rate" min="0" max="100" step="10" placeholder="30"> %
@@ -33,8 +34,16 @@
             <p class="input-description">What is the relative cost of following or not following the principle?</p>
         </div>
         <button id="calculate-button">Calculate</button>
-        <div id="result"></div>
-        <div id="rating"></div>
+        <table>
+            <tr>
+                <th>Score</th>
+                <td id="result"></td>
+            </tr>
+            <tr>
+                <th>Rating</th>
+                <td id="rating"></td>
+            </tr>
+        </table>
     </div>
     <script src="script.js"></script>
 </body>

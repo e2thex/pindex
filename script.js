@@ -15,27 +15,33 @@ function calculatePrincipleScore() {
     // Calculate the Principle Score (P)
     const P = 100 * E * (C * R - (1 - C));
 
-    // Display the result
-    resultDiv.textContent = `Principle Score (P): ${P.toFixed(2)}`;
 
     // Determine the rating based on P
     let rating = '';
+    let ratingColor = '';
     if (P < 0) {
         rating = 'Bad';
+        ratingColor = 'red';
     } else if (P < 25) {
         rating = 'Meh';
+        ratingColor = 'gray';
     } else if (P < 50) {
         rating = 'Average';
+        ratingColor = 'lightgreen';
     } else if (P < 100) {
         rating = 'Good';
+        ratingColor = 'green';
     } else if (P < 200) {
         rating = 'Great';
-    } else {
+        ratingColor = 'darkgreen';
+    } else {    
         rating = 'Exceptional';
+        ratingColor = 'gold';
     }
 
-    // Display the rating
-    ratingDiv.textContent = `Rating: ${rating}`;
+    // Display the result
+    resultDiv.innerHTML = `<span style='color:${ratingColor}' >${P.toFixed(2)}</span>`;
+    ratingDiv.innerHTML = `<span style='color:${ratingColor}' >${rating}</span>`;
 }
 
 // Add a click event listener to the "Calculate" button
