@@ -1,0 +1,1 @@
+This code is mostly written by Chat GPT based on the information docs/README.md.
